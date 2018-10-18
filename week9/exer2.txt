@@ -1,0 +1,13 @@
+
+Baseline:
+Format: 'K frames: hits / misses'
+10 frames: 11 / 989
+50 frames: 51 / 949
+
+To increase a hit ratio we should put all the same page reference in one place in the input file. We can use sort for this.
+This yields next results:
+10 frames: 375 / 625
+50 frames: 375 / 625
+This is the same as with using 1000 frames, which would be ideal, as there are only 1000 numbers in the input file.
+
+To decrease the hit ratio we should put all the same page references at least K unique numbers apart, where K is the number of page frames. This could be achieved using a custom algorithm. Also, we could use random shuffling for that :)
