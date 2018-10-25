@@ -1,0 +1,12 @@
+660 user: can read, write  group: can read, write others: can nothing
+775:user: can do everything group: can do everything others: can read and execute
+777: everybody can do everything
+
+remove execute permission:
+chmod -x 
+grant all permissions...:
+chmod uo+rwx
+
+make group ....:
+read and copy with hands
+

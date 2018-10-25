@@ -1,0 +1,13 @@
+inode: 2393063
+filenames:
+..
+---------------
+inode: 2393089
+filenames:
+link1
+file1
+---------------
+inode: 2393084
+filenames:
+.
+---------------
