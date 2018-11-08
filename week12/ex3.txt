@@ -1,0 +1,22 @@
+1)first run:
+
+banana_and_bread@yourMummy:~/Documents/OS/week12$ sudo time ./copy /proc/cpuinfo ex3_copied_file.txt
+0.00user 0.00system 0:00.02elapsed 10%CPU (0avgtext+0avgdata 1392maxresident)k
+0inputs+24outputs (0major+57minor)pagefaults 0swaps
+
+2)with BUF_SIZE=1:
+
+0.00user 0.03system 0:00.05elapsed 66%CPU (0avgtext+0avgdata 1320maxresident)k
+0inputs+24outputs (0major+56minor)pagefaults 0swaps
+
+
+3)WITH SYNC:
+
+banana_and_bread@yourMummy:~/Documents/OS/week12$ sudo time ./copy /proc/cpuinfo ex3_copied_file.txt
+0.00user 0.00system 0:00.05elapsed 5%CPU (0avgtext+0avgdata 1308maxresident)k
+0inputs+80outputs (0major+56minor)pagefaults 0swaps
+
+Explanation:
+
+The execution is slower with buffer size 1 than in first-run because it has to look in memory more times than in the first run due to the smaller buffer size.
+The executin with sync is slower because we have to wait for the end of each operation:
