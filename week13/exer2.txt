@@ -1,0 +1,22 @@
+Deadlock recovery
+To recover from a deadlock it is necessary to kill some processes,
+which may not like it, or to take resources from them.
+This basically allows that your process can be killed by any time,
+which is bad on its own, but even more likely, there is a problem with
+determining which process should be killed.
+This may be still acceptable if processes don't have any state,
+or the resources themselves don't mind being juggled.
+
+Deadlock prevention
+It takes time for every resource access, which slows down big enterprise 
+systems.
+This is bad, but can still be acceptable in real-time systems.
+
+Deadlock avoidance
+It could be achieved by rejecting some of initial conditions for deadlocks
+to occur:
+
+  * Mutual exclusion: spool everything
+  * Hold and wait: request all resources initially
+  * No preemption: take resources away
+  * Circular wait: order resources numerically 
